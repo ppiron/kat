@@ -1,0 +1,22 @@
+img {
+  width: 100%;
+}
+
+#nav-menu {
+  margin-top: 20px;
+  height: 35px;
+  background-color: #c79698;
+  line-height: 35px;
+
+}
+
+.nav-link {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-family: Montserrat;
+  color: inherit;
+}
+
+.nav-link:hover {
+  color: hsl(357, 17%, 95%)
+}
