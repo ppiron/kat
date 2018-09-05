@@ -3,15 +3,18 @@
 html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   color: #191919;
   font-size: 14px;
   font-family: Raleway, sans-serif;
-  line-height: 1.7
+  line-height: 1.7;
 }
 
 body {
   max-width: 750px;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+* {
+  box-sizing: border-box;
 }

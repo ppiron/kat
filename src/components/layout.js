@@ -2,11 +2,9 @@ import React from 'react'
 import {Link} from 'gatsby'
 import header from '../images/header.jpg'
 import 'layout.css'
-import Overlay from './overlay'
 
 export default ({ children }) => (
   <div>
-    <Overlay visibility='none'></Overlay>
     <div>
       <img src={header} alt="Piano Lessons in Edinburgh!"/>
     </div>

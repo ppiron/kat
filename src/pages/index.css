@@ -1,0 +1,6 @@
+#pupils-small {
+  display: block;
+  float: right;
+  max-width: 300px;
+  cursor: zoom-in;
+}
