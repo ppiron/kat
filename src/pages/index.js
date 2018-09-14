@@ -82,13 +82,13 @@ render() {
 				</div>
 				<div style={{display: `flex`, justifyContent: `space-between`}}>
 					<div style={{display: `inline-block`}}>
-							<a href="http://www.abrsm.org/" target="_blank">
+							<a href="http://www.abrsm.org/" target="_blank" rel="noopener noreferrer">
 									<img className='logos' src={abrsm} alt="Associated Board of the Royal Schools of Music"/>
 							</a>
-							<a href="http://www.trinitycollege.com/" target="_blank">
+							<a href="http://www.trinitycollege.com/" target="_blank" rel="noopener noreferrer">
 									<img className='logos' src={trinity} alt="Trinity College London"/>
 							</a>
-							<a href="http://epta-europe.org/" target="_blank">
+							<a href="http://epta-europe.org/" target="_blank" rel="noopener noreferrer">
 									<img className='logos' src={epta} alt="European Piano Teachers Association"/>
 							</a>
 					</div>
@@ -96,7 +96,7 @@ render() {
 							<a href="photo-video.php">
 									<img className='logos' src={watchus} alt="Watch Us"/>
 							</a>
-							<a href="https://www.facebook.com/AllegranDo/" target="_blank">
+							<a href="https://www.facebook.com/AllegranDo/" target="_blank" rel="noopener noreferrer">
 									<img className='logos' src={likeus} alt="facebook"/>
 							</a>
 					</div>
