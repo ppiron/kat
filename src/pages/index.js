@@ -3,6 +3,11 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Overlay from '../components/overlay'
 import pupils from '../images/pupils.jpg'
+import abrsm from '../images/abrsm.jpg'
+import epta from '../images/epta.jpg'
+import trinity from '../images/trinity.png'
+import likeus from '../images/likeus.jpg'
+import watchus from '../images/watchus.jpg'
 import 'index.css'
 
 export default class Home extends Component {
@@ -75,6 +80,27 @@ render() {
 						<strong> Intermediate</strong> and <strong>Advanced Students</strong>.
 					</p>
 				</div>
+				<div style={{display: `flex`, justifyContent: `space-between`}}>
+					<div style={{display: `inline-block`}}>
+							<a href="http://www.abrsm.org/" target="_blank">
+									<img className='logos' src={abrsm} alt="Associated Board of the Royal Schools of Music"/>
+							</a>
+							<a href="http://www.trinitycollege.com/" target="_blank">
+									<img className='logos' src={trinity} alt="Trinity College London"/>
+							</a>
+							<a href="http://epta-europe.org/" target="_blank">
+									<img className='logos' src={epta} alt="European Piano Teachers Association"/>
+							</a>
+					</div>
+					<div style={{display: `inline-block`}}>
+							<a href="photo-video.php">
+									<img className='logos' src={watchus} alt="Watch Us"/>
+							</a>
+							<a href="https://www.facebook.com/AllegranDo/" target="_blank">
+									<img className='logos' src={likeus} alt="facebook"/>
+							</a>
+					</div>
+    		</div>
 			</Layout>
 		)
 	}

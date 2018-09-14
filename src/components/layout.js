@@ -6,7 +6,7 @@ import 'layout.css'
 export default ({ children }) => (
   <div>
     <div>
-      <img src={header} alt="Piano Lessons in Edinburgh!"/>
+      <img className='header' src={header} alt="Piano Lessons in Edinburgh!"/>
     </div>
     <nav id='nav-menu'>
       <Link className='nav-link' to='/' activeStyle={{ color: `hsl(357, 27%, 95%)`, }}>Home</Link>

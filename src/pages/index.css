@@ -4,3 +4,13 @@
   max-width: 300px;
   cursor: zoom-in;
 }
+
+.logos {
+  display: inline-block;
+  height: 50px;
+  margin-right: 5px;
+}
+
+a:nth-last-child(1) > .logos {
+  margin-right: 0;
+}
