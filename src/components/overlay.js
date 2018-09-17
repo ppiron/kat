@@ -1,5 +1,5 @@
 import React from 'react'
-import 'overlay.css'
+import './overlay.css'
 import pupils from '../images/pupils-enlarged.jpg'
 import close from '../images/icons8-delete-filled-50.png'
 

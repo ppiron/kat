@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import header from '../images/header.jpg'
-import 'layout.css'
+import './layout.css'
 
 export default ({ children }) => (
   <div>
@@ -27,6 +27,7 @@ export default ({ children }) => (
       <Link className='nav-link' to='/contact/' activeStyle={{ color: `hsl(357, 27%, 95%)`, }}>Contact</Link>
       <Link className='nav-link' to='/about/' activeStyle={{ color: `hsl(357, 27%, 95%)`, }}>About</Link>
     </nav>
+    <p style={{textAlign: `center`, fontSize: `90%`, color: `black`, paddingBottom: `10px`}}>Copyright © 2008-2018, All rights reserved.</p>
   </div>
 
 )

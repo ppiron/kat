@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:600');
 
 html {
   margin: 0;
   padding: 0;
   color: #191919;
-  font-size: 14px;
-  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  font-family: Georgia, sans-serif;
   line-height: 1.7;
 }
 

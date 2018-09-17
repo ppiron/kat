@@ -8,7 +8,7 @@ import epta from '../images/epta.jpg'
 import trinity from '../images/trinity.png'
 import likeus from '../images/likeus.jpg'
 import watchus from '../images/watchus.jpg'
-import 'index.css'
+import './index.css'
 
 export default class Home extends Component {
 	constructor() {
@@ -62,7 +62,7 @@ render() {
 			<Layout>
 				<Overlay visibility={this.state.visibility} toggleVisibility={this.toggleVisibility}></Overlay>
 				<h3>Welcome to AllegranDo: Piano Lessons in Edinburgh!</h3>
-				<p>My name is Ekaterina Belik. I am an experienced pianist and piano teacher, professional member of EPTA UK (European Piano Teacher's Association).
+				<p>My name is Ekaterina Belik. I am an experienced pianist and piano teacher, professional member of EPTA&nbsp;UK (European Piano Teacher's Association).
 					I enjoy performing and teaching piano to children and adults in Edinburgh, Scotland.</p>
 				<div id="skills">
 					<img id='pupils-small' src={pupils} alt="My Pupil" onClick={this.toggleVisibility}/>
