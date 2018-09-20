@@ -14,3 +14,16 @@
 a:nth-last-child(1) > .logos {
   margin-right: 0;
 }
+
+.classesLink {
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 1px;
+  background-image:
+    linear-gradient(
+      to right,hsl(357, 100%, 25%),hsl(357, 100%, 25%)
+    );
+  background-position: left 0 bottom 0;
+  background-repeat: repeat-x;
+  background-size: 10px 2px;
+}

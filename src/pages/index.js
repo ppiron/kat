@@ -76,7 +76,7 @@ render() {
 					</ul>	
 					<p style={{ clear: `both`, paddingTop: `14px` }}>I also help my students to prepare for ABRSM, Trinity and LCM graded exams, Edinburgh Music Festival, various concerts, masterclasses and competitions.</p>
 					<p>
-						Please see my <Link to='/classes/' style={{ color: `hsl(357, 100%, 25%)`, textDecoration: `none`}}>Classes</Link> for <strong>Young Beginners</strong>, <strong>Adult Beginners</strong> and
+						Please see my <Link to='/classes/' className='classesLink'>Classes</Link> for <strong>Young Beginners</strong>, <strong>Adult Beginners</strong> and
 						<strong> Intermediate</strong> and <strong>Advanced Students</strong>.
 					</p>
 				</div>
