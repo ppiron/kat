@@ -32,6 +32,7 @@ input {
 textarea {
   width: 420px;
   height: 150px;
+  min-height: 150px;
   padding: 10px 15px;
   border: 1px solid #c0c0c0;
   outline-color: #888888;
@@ -40,6 +41,7 @@ textarea {
   display: block;
   margin: 0 auto;
   margin-top: 5px;
+  resize: vertical;
 }
 
 label {
