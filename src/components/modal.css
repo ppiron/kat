@@ -1,0 +1,62 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  display: flex;
+  align-items: center;
+}
+
+.img-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  background-color: gainsboro;
+  max-height: 580px;
+  cursor: default;
+}
+
+.img-container > img {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  cursor: default;
+  border: 5px solid white;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.opacityDown {
+  opacity: 0;
+}
+
+.opacityUp {
+  opacity: 1;
+}
+
+.scaleDown {
+  transform: scale(0.75);
+}
+
+.scaleUp {
+  transform: scale(1.0);
+}
+
+.animate {
+  animation: opUp 0.5s ease-out 0s 1 normal forwards;
+}
+
+@keyframes opUp {
+  0%, 50% {
+    transform: scale(0.75)
+  }
+  100% {
+    transform: scale(1.0)
+  }
+}
