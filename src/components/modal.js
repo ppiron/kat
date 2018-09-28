@@ -49,7 +49,7 @@ export default class Modal extends Component {
             this.props.toggleModal()
           }
         }}>
-          <div className={`img-container`}>
+          <div className={'img-container ' + (this.props.visibility ? 'scaleUp animate' : 'scaleDown')}>
             <img src={images[visiblePic]} alt=""/>
           </div>        
         </div>        
