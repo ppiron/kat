@@ -26,6 +26,9 @@ export default class Modal extends Component {
 
   render() {
     const visibility = this.props.visibility ? 'visible' : 'hidden'
+    const visiblePic = this.state.pic || this.props.initialPic
+    const background = document.querySelectorAll('.background')[0]
+
     const images = [
       image01,
       image02,
@@ -33,24 +36,32 @@ export default class Modal extends Component {
       image04,
       image05
     ]
-    const visiblePic = this.state.pic || this.props.initialPic
     
-    let backgOpacity
-    if (this.props.visibility === false)  {
-      backgOpacity = 'opacityDown'
+    let bgOpacity
+    if (this.props.visibility === true)  {
+      bgOpacity = 'opacityUp'
     } else {
-      backgOpacity = 'opacityUp'
+      bgOpacity = 'opacityDown'
     }
+    
+    let shouldToggleModal = false
 
     return (
       <div style={{visibility: visibility}} >
-        <div className={`background ${backgOpacity}`} onClick={(evt) => {
+        <div className={`background ${bgOpacity}`} onClick={(evt) => {
           if (this.shouldHideModal(evt.clientX, evt.clientY)) {
+            background.classList.remove('opacityUp')
+            background.classList.add('opacityDown')
+            shouldToggleModal = true;
+          }
+        }} onTransitionEnd={() => {
+          if (shouldToggleModal) {
             this.props.toggleModal()
+            shouldToggleModal = false
           }
         }}>
-          <div className={'img-container ' + (this.props.visibility ? 'scaleUp animate' : 'scaleDown')}>
-            <img src={images[visiblePic]} alt=""/>
+          <div className={'img-container ' + (this.props.visibility ? 'scaleUp animate' : 'scaleDown')} >
+            <img className={this.props.visibility ? 'revealImg' : ''} src={images[visiblePic]} alt=""/>
           </div>        
         </div>        
       </div>
