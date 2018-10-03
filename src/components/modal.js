@@ -10,6 +10,8 @@ export default class Modal extends Component {
   
   constructor(props) {
     super(props)
+    this.background = React.createRef()
+    this.container = React.createRef()
   
     this.state = {
        pic: null,
@@ -17,8 +19,7 @@ export default class Modal extends Component {
   }
 
   shouldHideModal = (x, y) => {
-    const container = document.querySelectorAll('.img-container')[0]
-    const rect = container.getBoundingClientRect()
+    const rect = this.container.current.getBoundingClientRect()
 		if (!((x >= rect.left && x <= rect.right) && (y >= rect.top && y <= rect.bottom))) {
 			return true
 		}
@@ -27,7 +28,6 @@ export default class Modal extends Component {
   render() {
     const visibility = this.props.visibility ? 'visible' : 'hidden'
     const visiblePic = this.state.pic || this.props.initialPic
-    const background = document.querySelectorAll('.background')[0]
 
     const images = [
       image01,
@@ -48,10 +48,10 @@ export default class Modal extends Component {
 
     return (
       <div style={{visibility: visibility}} >
-        <div className={`background ${bgOpacity}`} onClick={(evt) => {
+        <div className={`background ${bgOpacity}`} ref={this.background} onClick={(evt) => {
           if (this.shouldHideModal(evt.clientX, evt.clientY)) {
-            background.classList.remove('opacityUp')
-            background.classList.add('opacityDown')
+            this.background.current.classList.remove('opacityUp')
+            this.background.current.classList.add('opacityDown')
             shouldToggleModal = true;
           }
         }} onTransitionEnd={() => {
@@ -60,7 +60,7 @@ export default class Modal extends Component {
             shouldToggleModal = false
           }
         }}>
-          <div className={'img-container ' + (this.props.visibility ? 'scaleUp animate' : 'scaleDown')} >
+          <div className={'img-container ' + (this.props.visibility ? 'scaleUp animate' : 'scaleDown')} ref={this.container}>
             <img className={this.props.visibility ? 'revealImg' : ''} src={images[visiblePic]} alt=""/>
           </div>        
         </div>        
