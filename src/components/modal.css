@@ -16,11 +16,11 @@
   width: 100%;
   max-width: 800px;
   background-color: gainsboro;
-  max-height: 580px;
+  max-height: 650px;
   cursor: default;
 }
 
-.img-container > img {
+.image {
   display: block;
   margin: 0 auto;
   max-width: 800px;
@@ -68,4 +68,26 @@
   100% {
     visibility: visible;
   }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.img-scroll {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
 }
