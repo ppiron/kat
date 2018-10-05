@@ -18,6 +18,8 @@
   background-color: gainsboro;
   max-height: 650px;
   cursor: default;
+  transition: height 0.5s ease-out;
+  position: relative;
 }
 
 .image {
@@ -71,6 +73,9 @@
 }
 
 .buttons {
+  position: absolute;
+  transition: top 0.5s ease-out;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   height: 40px;
