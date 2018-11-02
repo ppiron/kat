@@ -9,23 +9,24 @@ import image05 from '../images/image05.jpg'
 import video01 from '../images/video01.jpg'
 import video02 from '../images/video02.jpg'
 import Modal from '../components/modal'
-
-
+import VidModal from '../components/vidModal'
 
 export default class Media extends Component {
 
   constructor(props) {
     super(props)
-  
+
     this.state = {
       modalVisible: false,
+      vidModalVisible: false,
     }
     this.clikedPic = null
     this.toggleModal = this.toggleModal.bind(this)
+    this.clikedVid = null
+    this.toggleVidModal = this.toggleVidModal.bind(this)
   }
 
   toggleModal(idx) {
-
     if (!this.state.modalVisible) {
       this.clikedPic = idx
       this.setState(
@@ -40,7 +41,24 @@ export default class Media extends Component {
         }
       )
     }
+  }
 
+  toggleVidModal(idx) {
+    if (!this.state.vidModalVisible) {
+      this.clikedVid = idx
+      this.setState(
+        {
+          vidModalVisible: true
+        }
+      )
+    } else {
+      this.clikedVid = null
+      this.setState(
+        {
+          vidModalVisible: false
+        }
+      )
+    }
   }
 
   render() {
@@ -55,7 +73,7 @@ export default class Media extends Component {
     const videos = [
       video01,
       video02,
-      video01
+
     ]
 
     return(
@@ -76,19 +94,23 @@ export default class Media extends Component {
             )
           })}
         </div>
+        <VidModal visibility={this.state.vidModalVisible} initialVid={this.clikedVid} toggleModal={this.toggleVidModal}></VidModal>
+        <h3>
+          Video
+        </h3>
         <p>
           Click on a video to play it.
         </p>
-        <div className="thumbContainer">
+        <div className="vidContainer">
           {videos.map((video, idx) => {
             return(
-              <div key={video} className='vid' >
+              <div key={video} className='vid' onClick={() => this.toggleVidModal(idx)}>
                 <img src={video} alt={""}/>
               </div>
             )
           })}
         </div>
-      </Layout>  
+      </Layout>
     )
   }
 }
